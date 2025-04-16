@@ -18,5 +18,13 @@ public class serviceTransaksi {
             trs[maxIdx] = temp;
         }
     }
+    public void MaxSaldo(){
+    transaksi maxSaldo = trs[0];
+    for (int i = 1; i < idx; i++) {
+        if (trs[i].saldo > maxSaldo.saldo) {
+            maxSaldo = trs[i];
+            }
+        }
     }
+}
 
