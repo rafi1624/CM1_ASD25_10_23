@@ -1,30 +1,37 @@
-import java.util.Scanner;
-
 public class serviceTransaksi {
-    transaksi[] trs = new transaksi[10];
+    transaksi[] trs;
     int idx = 0;
     int jumData;
 
-    public void sortingDSC() {
+    serviceTransaksi(int kapasitas) {
+        trs = new transaksi[kapasitas];
+        idx = 0;
+    }
+
+    void tambah(transaksi transaksi) {
+        if (idx < trs.length) {
+            trs[idx++] = transaksi;
+        } else {
+            System.out.println("Data penuh.");
+        }
+    }
+
+    void displayData() {
+        for (int i = 0; i < idx; i++) {
+            trs[i].tampilDataTransaksi();
+        }
+    }
+
+    public void sorting() { //(menu 5) sorting final saldo
         for (int i = 0; i < idx - 1; i++) {
-            int maxIdx = i;
-            for (int j = i + 1; j < idx; j++) {
-                if (trs[j].saldo > trs[maxIdx].saldo) {
-                    maxIdx = j;
+            for (int j = 0; j < idx - i - 1; j++) {
+                if (trs[j].finalSaldo > trs[j + 1].finalSaldo) {
+                    transaksi temp = trs[j];
+                    trs[j] = trs[j + 1];
+                    trs[j + 1] = temp;
                 }
             }
-            transaksi temp = trs[i];
-            trs[i] = trs[maxIdx];
-            trs[maxIdx] = temp;
         }
     }
-    public void MaxSaldo(){
-    transaksi maxSaldo = trs[0];
-    for (int i = 1; i < idx; i++) {
-        if (trs[i].saldo > maxSaldo.saldo) {
-            maxSaldo = trs[i];
-            }
-        }
-    }
-}
 
+}
