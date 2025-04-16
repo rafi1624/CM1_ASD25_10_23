@@ -40,6 +40,9 @@ public class serviceTransaksi {
 
 
     void displayData() {
+        System.out.printf("%-15s %-20s %-10s %-12s %-12s %-18s %-10s\n", 
+                          "Kode Transaksi", "No Rekening", "Saldo", 
+                          "Debit/Kredit", "Final Saldo", "Tanggal Transaksi", "Type");
         for (int i = 0; i < idx; i++) {
             trs[i].tampilDataTransaksi();
         }

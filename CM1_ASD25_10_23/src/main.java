@@ -40,8 +40,10 @@ public class main {
 
             switch (pilihan) {
                 case 1:
-                    
                     System.out.println("DATA NO REKENING:");
+                    System.out.printf("%-20s %-15s %-15s %-15s %-25s\n", 
+                  "No Rekening", "Nama", "Nama Ibu", "No HP", "Email");
+
                     for (Bank bank : arrayOfBank) {
                         bank.tampilDataNorek();
                        
