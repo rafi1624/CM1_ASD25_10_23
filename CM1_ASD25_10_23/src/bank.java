@@ -16,10 +16,8 @@ class Bank {
     
 
     public void tampilDataNorek() {
-        System.out.println("noRekening: " + noRekening );  
-        System.out.println("Nama : " + nama);
-        System.out.println("Nama Ibu : "+ namaIbu);
-        System.out.println("noHp : "+ noHp);
-        System.out.println("email : "+ email);
+        System.out.println("No Rekening \t Nama \t Nama Ibu \t NoHP \t Email");
+        System.out.println(noRekening +"\t"+ nama +"\t"+ namaIbu +"\t"+ noHp +"\t"+ email );
     }
+
 }
