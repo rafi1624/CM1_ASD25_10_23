@@ -1,7 +1,6 @@
 class Bank {
     String noRekening, nama, namaIbu, noHp, email;
 
-    
     public Bank(){
 
     }
@@ -15,12 +14,12 @@ class Bank {
         this.email = email;
     }
     
-    
-    // public void tampil() {
-    //     System.out.println("Kode : " + kode);  
-    //     System.out.println("Nama : " + nama);
-    //     System.out.println("Jenis Kelamin : " + (jenisKelamin ? "Laki-laki" : "Perempuan"));
-    //     System.out.println("Usia : " + usia);
-    //     System.out.println("");
-    // }
+
+    public void tampilDataNorek() {
+        System.out.println("noRekening: " + noRekening );  
+        System.out.println("Nama : " + nama);
+        System.out.println("Nama Ibu : "+ namaIbu);
+        System.out.println("noHp : "+ noHp);
+        System.out.println("email : "+ email);
+    }
 }
