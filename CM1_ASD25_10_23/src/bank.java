@@ -15,6 +15,7 @@ class Bank {
         this.email = email;
     }
     
+    
     // public void tampil() {
     //     System.out.println("Kode : " + kode);  
     //     System.out.println("Nama : " + nama);
